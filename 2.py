@@ -1,45 +1,30 @@
 def ugadaika():
-    yes = "да"
-    no = "нет"
+    yes = "РґР°"
+    no = "РЅРµС‚"
 
-    while True:
-        print("/////Игра Угадайка/////")
-        print("Загадайте число от 1 до 10 .")
-        
-        predpolozhenie = 1 
-        schetcik = 0
-        igra_zavershena = False
+    print("/////РРіСЂР° РЈРіР°РґР°Р№РєР°/////")
+    print("Р—Р°РіР°РґР°Р№С‚Рµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 10 .")
 
-       
-        while predpolozhenie <= 10:
-            schetcik += 1
+    predpolozhenie = 1 
+    schetcik = 0
 
-            print(f"\nЗагаданное число {predpolozhenie}? Введите '{yes}' или '{no}'")
+       while predpolozhenie <= 10:
+        schetcik += 1
 
-            user_input = input()
+        print(f"\nР—Р°РіР°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ {predpolozhenie}? Р’РІРµРґРёС‚Рµ '{yes}' РёР»Рё {no}")
 
-            if user_input == yes:
-                
-                print(f"Ха! Я угадал число {predpolozhenie} за {schetcik} попыток.")
-                igra_zavershena = True
-                break
-            elif user_input == no:
-               
-                print("Хорошо, продолжаю перебор...")
-                predpolozhenie += 1
-            else:
-               
-                print(f"Некорректный ввод. Пожалуйста, введите '{yes}' или '{no}'.")
+        user_input = input()
 
+        if user_input == yes:
 
-        if not igra_zavershena:
-          
-            print("Кажется, вы загадали число вне диапазона 1-10 или вводили некорректные ответы.")
-
-       
-        print(f"\nХотите сыграть еще раз? Введите '{yes}' или '{no}'")
-        user_choice_restart = input()
-
-        if user_choice_restart != yes:
-            print("Спасибо за игру! До свидания.")
+            print(f"РҐР°! РЇ СѓРіР°РґР°Р» С‡РёСЃР»Рѕ {predpolozhenie} Р·Р° {schetcik} РїРѕРїС‹С‚РѕРє.")
             break
+        else:
+
+            print("РҐРѕСЂРѕС€Рѕ, РїСЂРѕРґРѕР»Р¶Р°СЋ РїРµСЂРµР±РѕСЂ...")
+            predpolozhenie += 1
+    else:
+        print("РљР°Р¶РµС‚СЃСЏ, РІС‹ Р·Р°РіР°РґР°Р»Рё С‡РёСЃР»Рѕ РІРЅРµ РґРёР°РїР°Р·РѕРЅР° 1-10 РёР»Рё РІРІРѕРґРёР»Рё РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ РѕС‚РІРµС‚С‹.")
+ugadaika()
+
+print(f"\nРҐРѕС‚РёС‚Рµ СЃС‹РіСЂР°С‚СЊ РµС‰Рµ СЂР°Р·? Р’РІРµРґРёС‚Рµ '{yes}' РёР»Рё '{no}'")
