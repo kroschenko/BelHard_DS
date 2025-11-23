@@ -1,8 +1,8 @@
 from RandomNumberGame import RandomNumberGame
 
 while True:
-    game = RandomNumberGame(minNumber=1, maxNumber=10)
-    game.startGame()
+    game = RandomNumberGame(min_number=1, max_number=10)
+    game.start_game()
 
     print()
     answer = input("Хотите сыграть еще? ")
@@ -10,4 +10,3 @@ while True:
         continue
     else:
         break
-

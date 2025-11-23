@@ -1,19 +1,19 @@
 from numpy import random
 
 class RandomNumberGame:
-    def __init__(self, minNumber: int, maxNumber: int):
-        self.minNumber = minNumber
-        self.maxNumber = maxNumber
+    def __init__(self, min_number: int, max_number: int):
+        self.min_number = min_number
+        self.max_number = max_number
 
-    def startGame(self):
-        randomNumber = random.randint(self.minNumber, self.maxNumber)
-        userNumber = 0
-        while userNumber != randomNumber:
-            userNumber = int(input("Угадайте число от 1 до 10: "))
+    def start_game(self):
+        random_number = random.randint(self.min_number, self.max_number)
+        user_number = 0
+        while user_number != random_number:
+            user_number = int(input("Угадайте число от 1 до 10: "))
 
-            if userNumber > randomNumber:
+            if user_number > random_number:
                 print("Загаданное число меньше указанного")
-            elif userNumber < randomNumber:
+            elif user_number < random_number:
                 print("Загаданное число больше указанного")
 
         print("Ура!!! Вы угадали!!!")

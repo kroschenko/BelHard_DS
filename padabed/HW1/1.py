@@ -5,4 +5,4 @@ height = float(input("Введите длину прямоугольника: ")
 
 calc = RectangleCalculator(width, height)
 
-print(calc.calculateArea())
+print(calc.calculate_area())
