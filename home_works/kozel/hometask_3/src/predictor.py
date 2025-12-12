@@ -51,7 +51,11 @@ class Predictor:
         return auc(fpr, tpr)
 
     @staticmethod
-    def plot_roc(fpr: list, tpr: list,) -> None:
+    def plot_roc(fpr: list,
+                 tpr: list,
+                 folder: str,
+                 file_name: str,
+                 file_extension:str ) -> None:
         plt.plot(fpr, tpr, lw=2, label=f'ROC (AUC = {Predictor.get_roc_auc(fpr, tpr):.4f})')
         plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--',
                  label='Random classifier (AUC = 0.5)')
@@ -59,4 +63,5 @@ class Predictor:
         plt.ylabel('True Positive Rate (TPR)')
         plt.title('Receiver Operating Characteristic (ROC) Analysis')
         plt.grid(True)
+        plt.savefig(folder + '/' + file_name + file_extension)
         plt.show()

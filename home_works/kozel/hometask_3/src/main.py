@@ -21,7 +21,11 @@ def main():
     roc_params = predictor.get_roc_params(pred_data[4], pred_data[0])
     print(f"ROC AUC: {predictor.get_roc_auc(roc_params[0], roc_params[1])}")
 
-    predictor.plot_roc(roc_params[0], roc_params[1])
+    predictor.plot_roc(roc_params[0],
+                       roc_params[1],
+                       Utils.PLOTS_FOLDER,
+                       Utils.PLOT_NAME,
+                       Utils.PLOT_EXTENSION)
 
 
 if __name__ == "__main__":
